@@ -1,5 +1,5 @@
 {
-  "name": "@webislife/wc-likes",
+  "name": "@webislife/wc-time",
   "version": "1.0.0",
   "description": "HTML5 <time> tag with steroids, lightweight and fully customizible and extenable custom element form <time> tag",
   "main": "src/wc-time.ts",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webislife/wc-likes.git"
+    "url": "git+https://github.com/webislife/wc-time.git"
   },
   "keywords": [
     "web-component",
@@ -24,9 +24,9 @@
   "author": "srokoff",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/webislife/wc-likes/issues"
+    "url": "https://github.com/webislife/wc-time/issues"
   },
-  "homepage": "https://github.com/webislife/wc-likes#readme",
+  "homepage": "https://github.com/webislife/wc-time#readme",
   "devDependencies": {
     "babel-minify": "^0.5.2",
     "node-sass": "^8.0.0",
