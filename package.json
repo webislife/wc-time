@@ -1,0 +1,38 @@
+{
+  "name": "@webislife/wc-likes",
+  "version": "1.0.0",
+  "description": "HTML5 <time> tag with steroids, lightweight and fully customizible and extenable custom element form <time> tag",
+  "main": "src/wc-time.ts",
+  "scripts": {
+    "sass": "./node_modules/node-sass/bin/node-sass ./src -o ./dist",
+    "tsc": "./node_modules/.bin/tsc",
+    "babel-minify": " ./node_modules/.bin/minify ./dist --mangle=false --out-dir ./dist --sourceType=module",
+    "build": "npm run sass && npm run tsc && npm run babel-minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webislife/wc-likes.git"
+  },
+  "keywords": [
+    "web-component",
+    "custom-element",
+    "time",
+    "html5",
+    "esnext",
+    "typescript"
+  ],
+  "author": "srokoff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webislife/wc-likes/issues"
+  },
+  "homepage": "https://github.com/webislife/wc-likes#readme",
+  "devDependencies": {
+    "babel-minify": "^0.5.2",
+    "node-sass": "^8.0.0",
+    "typescript": "^4.9.4"
+  },
+  "publishConfig": {
+    "@webislife:registry": "https://npm.pkg.github.com"
+  }
+}

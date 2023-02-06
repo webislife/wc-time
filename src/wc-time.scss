@@ -1,0 +1,90 @@
+:host {
+    --wctime-color-red-500: #F44336;
+    --wctime-color-grey-50: #FAFAFA;
+    --wctime-color-grey-100: #F5F5F5;
+    --wctime-color-grey-200: #EEEEEE;
+    --wctime-color-grey-400: #BDBDBD;
+    --wctime-color-grey-800: #424242;
+    --wctime-color-grey-900: #212121;
+}
+.wc-time {
+    & {
+        position: relative;
+        display: inline-block;
+        color: var(--wctime-color-grey-800);
+    }
+    & > dialog {
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        padding: 2px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        font-size: 1em;
+        line-height: 1em;
+        border:1px solid var(--wctime-color-grey-400);
+        background-color: var(--wctime-color-grey-50);
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+    & > dialog  .-date {
+        background-color: var(--wctime-color-grey-100);
+        color: var(--wctime-color-grey-800);
+        padding: 0.25em 0.5em;
+        display: inline-block;
+        border-radius: 4px;
+    }
+    & .-day {
+        background-color: var(--wctime-color-grey-200);
+        border: 1px solid var(--wctime-color-grey-400);
+        border-top: 3px solid var(--wctime-color-red-500);
+        display: inline-block;
+        padding: .25em .5em;
+        font-size: 0.8em;
+        border-radius: 3px;
+        line-height: 1em;
+    }
+    & .-time {
+        color: var(--wctime-color-grey-800);
+        padding: 0 0.5em;
+        border-radius: 4px;
+        display: inline-block;
+    }
+    & .-time:before {
+        margin-right: 0.25em;
+        content: '🕙';
+    }
+    & .-ago {
+        background-color: var(--wctime-color-grey-100);
+        color: var(--wctime-color-grey-900);
+        border-radius: 4px;
+        padding: 0.25em 0.5em;
+        display: inline-block;
+    }
+    &[data-tooltip] {
+        position: relative;
+        &:after {
+            position: absolute;
+            visibility: hidden;
+            transition: transform .2s ease;
+            top: -3px;
+            left: 50%;
+            z-index: 2;
+            transform: translate(-50%, 0%);
+            background-color: var(--wctime-color-grey-900);
+            color: var(--wctime-color-grey-50);
+            white-space: nowrap;
+            content: attr(data-tooltip);
+            display: inline-block;
+            padding: 3px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            line-height: 0.8em;
+        }
+        &:hover:after {
+            transform: translate(-50%, -100%);
+            visibility: visible;
+        }
+    }
+}
